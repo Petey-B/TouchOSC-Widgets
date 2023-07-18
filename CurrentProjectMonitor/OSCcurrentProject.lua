@@ -1,10 +1,16 @@
 --[[
 		OSCcurrentProject.lua	/OSCcurrentProject "CC"
 		- requires OSCexit.lua to shut down
-		- r.midi_init(20,-1) isn't needed unless there's focus issues
-		
+		- r.midi_init(ID-16,-1) isn't needed unless there's focus issues
+			this will occur if TouchOSC is being run locally on a
+			touchscreen monitor
+		- set the ID to a value of 20 + MIDI device ID #
+		- set the CH to the channel number used in TouchOSC
 
 ]]
+
+local ID = 36
+local CH = 0xBF -- 0xB0 + channel# -1
 
 local r = reaper
 local SMM = r.StuffMIDIMessage
@@ -31,9 +37,9 @@ end
 
 local SendStr = function(ID,Str)
 -- device = 16 + (bridge ID = 20), chan = 0xB0 + (16-1)
-	SMM( 36, 0xBF, CC, ID)
-	Str:gsub(".", function(c) SMM( 36, 0xBF, CC, c:byte()) end)
-	SMM( 36, 0xBF, CC,127)
+	SMM( ID, CH, CC, ID)
+	Str:gsub(".", function(c) SMM( ID, CH, CC, c:byte()) end)
+	SMM( ID, CH, CC,127)
 end
 
 local function Qloop()
@@ -43,8 +49,9 @@ local function Qloop()
 		DeferCt = 0
 		if HES( "OSC", "OSCcurrentProject" ) then
 			DES( "OSC", "OSCcurrentProject", false )
+			--r.midi_init(ID-16,-1)
 			SendStr(1,"shutting down")
-			SendStr(2,"-.-.--")
+			SendStr(3,"-.-.--")
 			return
 		else
 			local chkProj = EP(-1)
@@ -68,7 +75,7 @@ local function Qloop()
 end
 
 --------- MAIN --------------------------------------------------------
-
+--r.midi_init(ID-16,-1)
 DES( "OSC", "OSCcurrentProject", false )
 local _,_,_,_,_,_,_,conStr = r.get_action_context()
 local CCstr = string.match(conStr,".+:s=(%d+)")
