@@ -12,7 +12,7 @@
 	- Click **Add** and hit the power button
 	- Select **OSCexit.lua**
 	- Click **Add** and hit the power button again
-- The next time you hit the power button the widget should be active
+- The next time you hit the power button the widget should be active  
 **Known Issues**
   - If you're running TouchOSC locally on a touchscreen monitor there are problems with the initial MIDI messages being received by the widget. This has to do with the active application focus switching when you tap the power button. If the widget is not updated when turning on or off, uncomment the 2 lines
   	- **r.midi_init(ID-16,-1)**
