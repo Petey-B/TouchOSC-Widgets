@@ -10,6 +10,6 @@
 - In the Action List
 	- Select **OSCcurrentProject.lua**
 	- Click **Add** and hit the power button
-	- Select "OSCexit.lua"
+	- Select **OSCexit.lua**
 	- Click **Add** and hit the power button again
 - The next time you hit the power button the widget should be active
