@@ -35,9 +35,9 @@ local barString = function()
 	return string.format("%d.%.2f",ms,qns-qnms+1)
 end
 
-local SendStr = function(ID,Str)
+local SendStr = function(InfoID,Str)
 -- device = 16 + (bridge ID = 20), chan = 0xB0 + (16-1)
-	SMM( ID, CH, CC, ID)
+	SMM( ID, CH, CC, InfoID)
 	Str:gsub(".", function(c) SMM( ID, CH, CC, c:byte()) end)
 	SMM( ID, CH, CC,127)
 end
