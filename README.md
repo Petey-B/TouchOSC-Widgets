@@ -6,3 +6,6 @@
 
 #### Quick Markers
 - Basic widget for manipulating project markers 1 to 8
+
+#### MIDI Editor Cursor
+- Widget for moving the edit cursor by discrete distances in the MIDI Editor
