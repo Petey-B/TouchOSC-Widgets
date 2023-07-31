@@ -1,6 +1,8 @@
 ### MIDI Editor View Scroll/Zoom
 **How To Use:**  
-- Paste the widget into an existing control surface
+- Open the TouchOSC file
+	- after the initial setup you only need the **gView** control group
+	- you can copy and paste it into another file
 - Copy the two Lua scripts into your Reaper scripts folder and add them to the Action List
 	- MEV_scroll.lua
 	- MEV_zoom.lua
@@ -21,12 +23,12 @@
 - Add the **MIDI** shortcuts:
 	- in the Action List **Section** dropdown, select **MIDI Editor**
 	- using the **Filter** box search for "wheel"
-	- select the following scripts and tap the corresponding button in the widget
+	- select the following scripts, click **Add...** and tap the corresponding button in the widget
 		- View: Scroll horizontally (MIDI relative/mousewheel)
 		- View: Scroll vertically (MIDI relative/mousewheel)
 		- View: Zoom horizontally (MIDI relative/mousewheel)
 		- View: Zoom vertically (MIDI relative/mousewheel)
-	- when assigning, set the **MIDI CC** dropdown is set to **Relative 2**
+	- when assigning, set the **MIDI CC** dropdown to **Relative 2**
 	- if you changed the CC values, change them in the MIDI message that the buttons send
 
 - ***If you are running TouchOSC locally*** on a touchscreen monitor that grabs focus:
