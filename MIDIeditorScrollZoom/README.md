@@ -28,9 +28,10 @@
 		- View: Zoom vertically (MIDI relative/mousewheel)
 	- when assigning, set the **MIDI CC** dropdown is set to **Relative 2**
 	- if you changed the CC values, change them in the MIDI message that the buttons send
-	- ***If you are running TouchOSC locally*** on a touchscreen monitor that grabs focus:
-		- arm a track for MIDI input if the button's MIDI messages aren't picked up
-		- if this doesn't work, try running it on a phone or tablet
+
+- ***If you are running TouchOSC locally*** on a touchscreen monitor that grabs focus:
+	- arm a track for MIDI input if the button's MIDI messages aren't picked up
+	- if this doesn't work, try running it on a phone or tablet
 
 **Caveats:**
   - If you're running TouchOSC locally on a touchscreen monitor there are problems with the MIDI messages being received by Reaper. This has to do with the active application focus switching when you tap the control surface. 	- This issue is resolved by the call to:
