@@ -9,3 +9,6 @@
 
 #### MIDI Editor Cursor
 - Widget for moving the edit cursor by discrete distances in the MIDI Editor
+
+#### MIDI Editor Scroller/Zoomer
+- Widget for adjusting the view vertically and horizontally in the MIDI Editor
