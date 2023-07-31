@@ -37,6 +37,6 @@
 
 **Caveats:**
   - If you're running TouchOSC locally on a touchscreen monitor there are problems with the MIDI messages being received by Reaper. This has to do with the active application focus switching when you tap the control surface. 	- This issue is resolved by the call to:
-		SN_FocusMIDIEditor()
+		>SN_FocusMIDIEditor()
 - If you don't plan on ever using TouchOSC locally, this line can be removed from the scripts.
 - This function is part of the SWS extensions API, if you leave it in you'll need to have SWS.
