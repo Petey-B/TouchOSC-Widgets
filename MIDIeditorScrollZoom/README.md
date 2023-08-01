@@ -48,5 +48,3 @@ These scripts are designed for readability and easy changes,  to minimize load t
 e.g. in **MEV_scroll.lua** :  
 	> `local dir,val = string.match(conStr,".+:s=([HV])(.+)")`  
 	> `r.StuffMIDIMessage( 1, 0xBF, dir=="H" and 10 or 11, 64 + tonumber(val) )`
-
-> :warning: **Warning:** Do not push the big red button.
