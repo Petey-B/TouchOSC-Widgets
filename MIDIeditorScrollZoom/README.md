@@ -44,6 +44,7 @@
 - If you don't plan on ever using TouchOSC locally, this line can be removed from the scripts.
 - This function is part of the SWS extensions API, if you leave it in you'll need to have SWS.
 
-These scripts are designeded for readability and easy changes,  to minimize load times the scripts I use have been pre-compiled and refactored, e.g. in **MEV_scroll.lua** :  
+These scripts are designed for readability and easy changes,  to minimize load times the scripts I use have been pre-compiled and refactored,  
+e.g. in **MEV_scroll.lua** :  
 	> `local dir,val = string.match(conStr,".+:s=([HV])(.+)")`  
 	> `r.StuffMIDIMessage( 1, 0xBF, dir=="H" and 10 or 11, 64 + tonumber(val) )`
