@@ -45,5 +45,5 @@
 - This function is part of the SWS extensions API, if you leave it in you'll need to have SWS.
 
 These scripts are designeded for readability and easy changes,  to minimize load times the scripts I use have been pre-compiled and refactored, e.g. in **MEV_scroll.lua** :  
-	> `local dir,val = string.match(conStr,".+:s=([HV])(.+)")`
+	> `local dir,val = string.match(conStr,".+:s=([HV])(.+)")`  
 	> `r.StuffMIDIMessage( 1, 0xBF, dir=="H" and 10 or 11, 64 + tonumber(val) )`
