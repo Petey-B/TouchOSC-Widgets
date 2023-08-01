@@ -7,12 +7,13 @@
 	- MEV_scroll.lua
 	- MEV_zoom.lua
 - Edit the scripts if necessary:
-	- The scripts use MIDI channel 16 and CC#'s 10 through 13
-		- `local CCnum = dir=="H" and **10** or **11**` - in **MEV_scroll.lua**
-		- `local CCnum = dir=="H" and **12** or **13**` - in **MEV_zoom.lua**
-	- Change the parameters to StuffMIDIMessage( 1, 0xBF, CC#, CCval )
-	- channel 16 is 0xBF, 1-15 would be 0xB0 - 0xBE
 	- the CC#s must be four distinct values
+	- The scripts use MIDI channel 16 and CC#'s 10 through 13, set by:
+		- `local CCnum = dir=="H" and 10 or 11` - in **MEV_scroll.lua**
+		- `local CCnum = dir=="H" and 12 or 13` - in **MEV_zoom.lua**
+	- Change the CCnums to whatever you want to use
+	- The channel is the 2nd parameter to `StuffMIDIMessage( 1, 0xBF, CCnum, CCval )`
+	- channel 16 is 0xBF, 1-15 would be 0xB0 - 0xBE
 	- the values are up to you, but must be set before assigning the shortcuts
 
 - Add the **OSC** shortcuts:
@@ -39,9 +40,10 @@
 
 **Caveats:**
   - If you're running TouchOSC locally on a touchscreen monitor there are problems with the MIDI messages being received by Reaper. This has to do with the active application focus switching when you tap the control surface. 	- This issue is resolved by the call to:  
-		`SN_FocusMIDIEditor()`
+	- `SN_FocusMIDIEditor()`
 - If you don't plan on ever using TouchOSC locally, this line can be removed from the scripts.
 - This function is part of the SWS extensions API, if you leave it in you'll need to have SWS.
 
-<font color="red">This text is red!</font>
-<p style="color:blue">Make this text blue.</p>
+These scripts are designeded for readability and easy changes,  to minimize load times the scripts I use have been pre-compiled and refactored, e.g. in **MEV_scroll.lua** :
+	- `local dir,val = string.match(conStr,".+:s=([HV])(.+)")  
+		r.StuffMIDIMessage( 1, 0xBF, dir=="H" and 10 or 11, 64 + tonumber(val) )`

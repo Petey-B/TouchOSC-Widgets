@@ -1,4 +1,4 @@
--- MIDI EDITOR HORIZONTAL ZOOM - / /MEV_zoomH
+-- MIDI EDITOR ZOOM - / /MEV_zoom
 
 local r = reaper
 r.SN_FocusMIDIEditor()

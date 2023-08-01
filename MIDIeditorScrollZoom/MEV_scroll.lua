@@ -1,4 +1,4 @@
--- MIDI EDITOR SCROLL - /MEV_scrollH
+-- MIDI EDITOR SCROLL - /MEV_scroll
 
 local r = reaper
 r.SN_FocusMIDIEditor()
