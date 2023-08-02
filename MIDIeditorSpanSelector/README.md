@@ -21,10 +21,10 @@
 	- None of these modifiers apply when selecting all notes in the current take
 
 **Notes:**
-	- The toggles change their default values and are persistent only if the file is explicitly saved.  
-		The changes do not flag the file as dirty, so it can be closed without prompting.  
-		This actually has advantages; if you want it to start up a certain way, just save it.  
-		TouchOSC needs an [b]onExit()[/b] callback.
-	- The selection algorithm uses exact PPQ values to determine inclusion.  
-		As a result, boundary conditions may result in unintended selections.  
-		If this turns out to be overly annoying I'll add a few more "if" blocks.
+- The toggles change their default values and are persistent only if the file is explicitly saved.  
+	The changes do not flag the file as dirty, so it can be closed without prompting.  
+	This actually has advantages; if you want it to start up a certain way, just save it.  
+	TouchOSC needs an [b]onExit()[/b] callback.
+- The selection algorithm uses exact PPQ values to determine inclusion.  
+	As a result, boundary conditions may result in unintended selections.  
+	If this turns out to be overly annoying I'll add a few more "if" blocks.
