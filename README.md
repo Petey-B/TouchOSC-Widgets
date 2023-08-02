@@ -12,3 +12,6 @@
 
 #### MIDI Editor Scroller/Zoomer
 - Widget for adjusting the view vertically and horizontally in the MIDI Editor
+
+#### MIDI Editor Note Selector (by time span)
+- Widget for selecting, deselecting and inverting the selection status of notes in the MIDI Editor
