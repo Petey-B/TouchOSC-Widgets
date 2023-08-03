@@ -1,5 +1,5 @@
 ### MIDI Editor Note Selector
-**How To Use:**  
+**Installation:**
 - Open the TouchOSC file
 	- the **gSelNote** control group can be copied and pasted into another control surface
 	- if you change the colors of the toggles, the control scripts will have to be edited
@@ -14,6 +14,7 @@
 	- select **ME_selByOffset.lua**, click **Add...** and tap the **ByOffset** button
 	- the scripts should now be triggered by their OSC namesakes
 
+**Usage:**
 - Open a MIDI editor window and start selecting
 	- the top two triangle buttons **◁ ▷** select the prev/next note
 	- the middle two triangle buttons **▷◁** trims an existing selection by removing the first/last note
