@@ -24,7 +24,7 @@
 		- in this case see the **slop toggle**
 	- the prev/next buttons are flanked by oval toggle buttons which affect the selection as follows:
 		- **+** - determines whether this is a new selection or extends an existing selection
-		- **🔁** - determines whether the selection will wrap when it reaches the end of the take
+		- **🔁** - determines whether the selection will wrap when it reaches the end or start of the take
 	- below the Index/PPQ section there is a slop toggle ... *aka tolerance (but it's slop)*
 		- **≈** - activates a radio control for selecting notes in a PPQ range instead of at exact values
 		- the first note's PPQ is snapped to the nearest even value set by the radio control
