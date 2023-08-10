@@ -23,7 +23,7 @@
 	- the middle two triangle buttons **▷ ◁** trim an existing selection by removing the first/last note
 	- the bottom two triangle buttons **◁ ▷** select the prev/next note by its index
 	- to the right of the index buttons are three toggles that limit which notes are selected
-		- **=♪** will only select notes of the same pitch (*also applies to Bu Offset*)
+		- **=♪** will only select notes of the same pitch (*also applies to By Offset*)
 		- **=Ch** will only select notes on the same channel
 		- **=V** will only select notes with the same velocity
 		- the toggles can be combined to select only notes that meet all the conditions
