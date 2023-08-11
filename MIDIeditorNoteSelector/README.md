@@ -50,9 +50,9 @@
 		- slop is taken into account if toggled on
 		- the **=♪** toggle limits the selection to notes of the same pitch, even if multiple notes are selected
 
-
 **Notes:**
 	- The toggles change their default values and are persistent only if the file is explicitly saved.  
 		The changes do not flag the file as dirty, so it can be closed without prompting.  
 		This actually has advantages; if you want it to start up a certain way, just save it.  
-	- The layout is still in flux and there are ongoing tweaks
+	- The layout is still in flux and there are ongoing tweaks.
+	- Some of the code is hard to follow, be forewarned if you try to modify it.
