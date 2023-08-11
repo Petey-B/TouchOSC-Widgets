@@ -1,23 +1,15 @@
-package.path = package.path .. 
-";C:\\Users\\pjbxm\\AppData\\Roaming\\REAPER\\Scripts\\!MySkripz\\?.lua"
-require "_DEBUG"
-
---[[	/ME_selByOffset		]]
-
+---- API
 local r = reaper
 local SMB = r.ShowMessageBox
-local GAC = r.get_action_context -- ()
-local MGA = r.MIDIEditor_GetActive -- () returns hWnd
-local MGT = r.MIDIEditor_GetTake -- (hWnd)
-local ESN = r.MIDI_EnumSelNotes -- (take,idx) idx -1 to get first
-local ppqSM = r.MIDI_GetPPQPos_StartOfMeasure -- (take, PPQpos)
+local GAC = r.get_action_context
+local MGA = r.MIDIEditor_GetActive
+local MGT = r.MIDIEditor_GetTake
+local ESN = r.MIDI_EnumSelNotes
+local ppqSM = r.MIDI_GetPPQPos_StartOfMeasure
 
 local MCE = r.MIDI_CountEvts
-    -- bRet, iNoteCt, iCCevtCt, iTxtSysxCt = (take)
 local MGN = r.MIDI_GetNote
-    -- bRet, bSel, bMute, nStartPPQpos, nEndPPQpos, iChan, iPitch, iVel = (take, idx)
 local MSN = r.MIDI_SetNote
-    -- bRet = (take, idx, [ bSel, bMute, nStartPPQpos, nEndPPQpos, iChan, iPitch, iVel, bNoSort])
 
 -- ipq = intervals per quarter
 --	if 0 then ipq = 1/grid
@@ -36,9 +28,8 @@ end
 
 ---------------------- MAIN --------------------------------------------------
 local _,_,_,_,_,_,_,conStr = GAC()
---local spanStr, pitchStr = string.match(conStr,".+:s=([^,]+),*(.*)")
 local slopStr, spanStr, pitchStr = string.match(conStr,".+:s=([0-9]*),([0-9%.]+)(P*)")
-scmx2(slopStr, spanStr, pitchStr)
+
 local hWnd = MGA()
 if hWnd then
 	local take = MGT(hWnd)

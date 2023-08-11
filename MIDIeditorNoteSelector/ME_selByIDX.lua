@@ -1,7 +1,3 @@
-package.path = package.path .. 
-";C:\\Users\\pjbxm\\AppData\\Roaming\\REAPER\\Scripts\\!MySkripz\\?.lua"
-require "_DEBUG"
-
 ---- API
 local r = reaper
 local SMB = r.ShowMessageBox

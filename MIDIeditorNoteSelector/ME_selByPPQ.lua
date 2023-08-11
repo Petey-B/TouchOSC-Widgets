@@ -1,4 +1,3 @@
-
 ---- API
 local r = reaper
 local SMB = r.ShowMessageBox
