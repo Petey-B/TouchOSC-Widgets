@@ -1,4 +1,3 @@
-
 ---- API
 local r = reaper
 local SMB = r.ShowMessageBox
@@ -109,7 +108,7 @@ if hWnd then
 				-- MEASURE
 				if sOp == "M" then
 					ts = mppq
-					te = ppqEM(take,cppq)  -- - 1
+					te = mppq==cppq and ppqEM(take,cppq+1) or ppqEM(take,cppq)  -- - 1
 				-- QUARTER
 				elseif sOp == "Q" then
 					qn = (cppq - mppq)//tix
