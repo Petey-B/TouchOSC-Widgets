@@ -40,5 +40,5 @@
 	- **SCALING**:  Keep the document the same size as the destination screen
 		- The tolerances are pretty tight and scaling may cause overlap and clipping
 	- See the post in the Reaper forum  
-		**MIDI Hardware, Control Surfaces, and OSC** > TouchOSC Widgets for Reaper  
+		- **MIDI Hardware, Control Surfaces, and OSC** > TouchOSC Widgets for Reaper  
 		for additional details...
