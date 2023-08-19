@@ -1,12 +1,4 @@
---[[	MEC_Jog.lua	-	/MEC_Jpg "+/-  ## "
-
-]]
-package.path = package.path .. 
-";C:\\Users\\pjbxm\\AppData\\Roaming\\REAPER\\Scripts\\!MySkripz\\?.lua"
-require "_DEBUG"
-
--- +/-	##
--- ## - 1=M, 2=H, 3=Q, 4=8th, ... 9=256th, 10=grid
+--	EC_Jog.lua	-	/EC_Jpg "+/-/B/E  ##/C/F"
 
 local r = reaper
 local _,_,_,_,_,_,_,conStr = r.get_action_context()
