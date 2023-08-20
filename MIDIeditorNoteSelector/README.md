@@ -46,7 +46,7 @@
 		- to use it start by selecting a note or notes
 		- tapping the button will select all the notes that occur at the same offset in every measure
 		- useful, for example, if you want to select all the offbeats in a percussion track
-		- the span radio control determines whether the offset is calculated from the start of, and applied to, a single measure, multiple measures of a half-measure
+		- the span radio control determines whether the offset is calculated from the start of, and applied to, a single measure, multiple measures or a half-measure
 		- slop is taken into account if toggled on
 		- the **=♪** toggle limits the selection to notes of the same pitch, even if multiple notes are selected
 
